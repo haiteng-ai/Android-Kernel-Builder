@@ -44,6 +44,8 @@ jobs:
 
       DEFCONFIG_NAME: ${{ matrix.repos.kernelSource.device }}_defconfig
 
+      HOSTCFLAGS: "-fcommon"
+
       withKernelSU: ${{ matrix.repos.withKernelSU }}
     steps:
       - name: "✨ Create working dir"

@@ -186,3 +186,13 @@ jobs:
           path: ./${{ env.kernelDir }}/${{ env.OUT_DIR }}/arch/${{ env.ARCH }}/boot/dtbo.img
           if-no-files-found: ignore
           retention-days: 7
+
+      - name: "💚 Upload zImage"
+        uses: actions/upload-artifact@v3
+        with:
+          name: zImage(${{ env.kernelDevice }}-${{ env.kernelName }}-${{ env.kernelBranch }})
+          path: |
+            ./${{ env.kernelDir }}/${{ env.OUT_DIR }}/arch/${{ env.ARCH }}/boot/zImage
+            ./${{ env.kernelDir }}/${{ env.OUT_DIR }}/arch/${{ env.ARCH }}/boot/dts/*.dtb
+          if-no-files-found: ignore
+          retention-days: 7

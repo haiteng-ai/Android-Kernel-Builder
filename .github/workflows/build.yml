@@ -98,7 +98,7 @@ jobs:
           echo "ARCH=$ARCH" >> $GITHUB_ENV
 
           args="-j$(nproc --all)"
-          args="$args HOSTCFLAGS=-Wall -O2 -fcommon"
+          args="$args HOSTCFLAGS=-fcommon"
           if [ -n "${{ env.OUT_DIR }}" ]; then
             mkdir -p $(pwd)/${{ env.OUT_DIR }}
             args="$args O=$(pwd)/${{ env.OUT_DIR }}"

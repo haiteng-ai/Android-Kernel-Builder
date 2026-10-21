@@ -1,8 +1,8 @@
 [  {
     "kernelSource": {
       "name": "android_kernel_xiaomi_mocha",
-      "repo": "https://github.com/Abobo7/Smoke-kernel-mocha",
-      "branch": "cm-13.0",
+      "repo": "https://github.com/Abobo7/android_kernel_xiaomi_mocha",
+      "branch": "lineage-16.0",
       "device": "mocha_user"
     },
     "withKernelSU": false,
